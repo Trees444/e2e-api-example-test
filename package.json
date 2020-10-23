@@ -1,0 +1,14 @@
+{
+  "name": "test-api",
+  "version": "1.0.0",
+  "description": "test-api",
+  "scripts": {
+    "test": "mocha src/specs/*"
+  },
+  "mocha": {},
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "superagent": "^5.1.0"
+  }
+}
