@@ -12,5 +12,8 @@
     "mocha": "^6.2.2",
     "superagent": "^5.1.0",
     "cucumber": "^6.0.5"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.0.0-rc.0"
   }
 }
