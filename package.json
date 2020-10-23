@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "test-api",
   "scripts": {
-    "test": "mocha src/specs/*"
+    "testDefault": "mocha src/specs/*",
+    "testCucumber": "cucumber-js"
   },
   "mocha": {},
   "dependencies": {
     "chai": "^4.2.0",
     "mocha": "^6.2.2",
-    "superagent": "^5.1.0"
+    "superagent": "^5.1.0",
+    "cucumber": "^6.0.5"
   }
 }
