@@ -1,7 +1,9 @@
+const config = require('../../resources/config');
+
 module.exports = {
     async createNewUser(agent, userData) {
         return await agent
-            .post('https://reqres.in/api/users')
+            .post(`${config.apiURL}/api/users`)
             .send(userData)
             .then((res) => {
                 return res;
@@ -13,7 +15,7 @@ module.exports = {
 
     async updateUser(agent, userData, id) {
         return await agent
-            .put(`https://reqres.in/api/users/${id}`)
+            .put(`${config.apiURL}/api/users/${id}`)
             .send(userData)
             .then((res) => {
                 return res;
