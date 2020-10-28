@@ -9,12 +9,13 @@ const user = userData.getUser();
 const updateUser = userData.getUser({ name: "morpheus updated"});
 let userId, res;
 
-When('user create', function () {
-    res = userHelper.createNewUser(agent, user);
+When('user create', async function () {
+    res = await userHelper.createNewUser(agent, user);
+    console.log("QQQQ ", res.status);
     userId = res.body.id;
 });
 
-// Then('check that user was created', function (expectedAnswer) {
-//     expect(res.statusCode).to.equal(201);
-//     expect(res.body.name).to.equal(user.name);
-// });
+Then('check that user was created', function (expectedAnswer) {
+    expect(res.status).to.equal(201);
+    expect(res.body.name).to.equal(user.name);
+});
