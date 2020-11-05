@@ -24,4 +24,26 @@ module.exports = {
                 console.log('updateUser error');
             })
     },
+
+    async getUser(agent, id) {
+        return await agent
+            .get(`${config.apiURL}/api/users/${id}`)
+            .then((res) => {
+                return res;
+            })
+            .catch((err) => {
+                console.log('getUser error with id: ' + id);
+            })
+    },
+
+    async getUsers(agent, page) {
+        return await agent
+            .get(`${config.apiURL}/api/users?page=${page}`)
+            .then((res) => {
+                return res;
+            })
+            .catch((err) => {
+                console.log('getUsers error');
+            })
+    },
 };

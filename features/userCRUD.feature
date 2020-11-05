@@ -7,3 +7,11 @@ Feature: User CRUD
   Scenario: User update
     When user updated
     Then check that user was updated
+
+  Scenario: Users list
+    When get list of users
+    Then check list of users
+
+  Scenario: Single user
+    When get single user
+    Then check user information
